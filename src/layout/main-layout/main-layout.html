@@ -1,5 +1,9 @@
 <section class="card-grid">
     <article class="component-card" *ngFor="let component of componentList; let i = index; trackBy: trackByID">
-        <p class="card-label">{{ component.label }}</p>
+        <p routerLink={{component.routerPath}} class="card-label">
+            {{ component.label }}
+        </p>
     </article>
+
+
 </section>

@@ -9,8 +9,8 @@ import { IComponentCard } from '../layoutInterfaces/componentCard';
 })
 export class MainLayout {
   componentList: IComponentCard[] = [
-    { label: 'Search with Debounce Component', id: 1 },
-    { label: 'Comment thread Component', id: 2 },
+    { label: 'Search with Debounce Component', id: 1, routerPath: '/SearchWithDebounce' },
+    { label: 'Comment thread Component', id: 2, routerPath: '/CommentThread' },
   ];
 
   trackByID(index: number): number {
