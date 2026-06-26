@@ -5,6 +5,7 @@ import { CommentThread } from '../../components/comment-thread/comment-thread';
 import { MainLayout } from '../../layout/main-layout/main-layout';
 import { Forms } from '../../components/forms/forms';
 import { ReactiveForms } from '../../components/reactive-forms/reactive-forms';
+import { SwitchMap } from '../../components/switch-map/switch-map';
 
 const routes: Routes = [
   { path: '', redirectTo: 'Home', pathMatch: 'full' },
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'ReactiveFormsPath',
     component: ReactiveForms,
+  },
+  {
+    path: 'SwitchMapPath',
+    component: SwitchMap,
   },
 ];
 
