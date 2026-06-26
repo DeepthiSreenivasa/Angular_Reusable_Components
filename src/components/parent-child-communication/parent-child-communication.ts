@@ -7,30 +7,21 @@ import { Component, EventEmitter, Input } from '@angular/core';
   styleUrl: './parent-child-communication.css',
 })
 export class ParentChildCommunication {
-
-  @Input data:any;
-
-
-
-
+  // @Input data:any;
 }
 
-parent.html
+// parent.html
 
-<child [data]="Deepthi" ></child>
+// <child [data]="Deepthi" ></child>
 
+// //child to parent
 
-//child to parent
+// @Output sendDatatoParent : EventEmitter<any>
 
-@Output sendDatatoParent : EventEmitter<any>
+// //child
+// <button (onclick)=sendToparent></button>
+// sendToparent(){
+//   this.sendDatatoParent.emit("data")
+// }
 
-
-//child
-<button (onclick)=sendToparent></button>
-sendToparent(){
-  this.sendDatatoParent.emit("data")
-}
-
-
-<child  (sendDatatoParent)=getDatafromParent($event)>
-
+// <child  (sendDatatoParent)=getDatafromParent($event)>
