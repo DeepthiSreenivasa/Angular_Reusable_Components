@@ -18,3 +18,14 @@ export class ExhaustMap {
     );
   }
 }
+
+/**
+ *
+ * mergemap - I dont care about order of execution of the api
+ * switchmap - cancel previous
+ * exhaustmap - dont allow the api to fire unless the previous is compelt
+ * concatmap - 1 after the other
+ * forkjoin - start all executions at once
+ *
+ *
+ */
