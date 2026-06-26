@@ -11,6 +11,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './switch-map.css',
 })
 export class SwitchMap implements OnInit {
+  /****Mostly used to cancel the previous API call */
+
   searchForm = new FormGroup({
     searchField: new FormControl('', Validators.required),
   });
