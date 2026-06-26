@@ -17,7 +17,6 @@ export class MainLayout {
   ];
 
   trackByID(index: number): number {
-    console.log('Index::', index);
     return index;
   }
 }

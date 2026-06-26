@@ -1,3 +1,6 @@
 <form [formGroup]="searchForm">
     <input formControlName="searchField" />
+    <div *ngFor="let user of userDetails">
+        <li>{{user.firstName}}</li>
+    </div>
 </form>

@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class Http {
   productUrl: string = 'https://fakestoreapi.com/carts/1';
+  userSearchApi: string = 'https://dummyjson.com/users/search?q=';
 
   constructor(public http: HttpClient) {}
 
@@ -15,6 +16,6 @@ export class Http {
   }
 
   public getSearchData(searchData: string): Observable<any> {
-    return this.http.get(this.productUrl + searchData);
+    return this.http.get(this.userSearchApi + searchData);
   }
 }

@@ -13,6 +13,8 @@ import { CommonModule } from '@angular/common';
 export class SwitchMap implements OnInit {
   /****Mostly used to cancel the previous API call */
 
+  public userDetails: any = [];
+
   searchForm = new FormGroup({
     searchField: new FormControl('', Validators.required),
   });
@@ -22,10 +24,13 @@ export class SwitchMap implements OnInit {
     this.searchForm
       .get('searchField')
       ?.valueChanges.pipe(
-        debounceTime(500),
+        debounceTime(200),
         distinctUntilChanged(),
-        switchMap((data) => (data ? this.http.getSearchData(data) : '')),
+        switchMap((value) => this.http.getSearchData(value ?? '')),
       )
-      .subscribe((data) => console.log(data));
+      .subscribe((data) => {
+        this.userDetails = data.users;
+        console.log('data::', this.userDetails);
+      });
   }
 }
