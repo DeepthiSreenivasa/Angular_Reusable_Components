@@ -1,7 +1,9 @@
 <form (ngSubmit)="getFormData()"> <!--form emits an event ngSubmit-->
 
     <input [(ngModel)]="this.userDetails.firstName" name="firstName" [ngModelOptions]="{standalone: true} " />
+    <br />
     <input [(ngModel)]=" this.userDetails.lastName" name="lastName" [ngModelOptions]="{standalone: true}" />
+    <br />
     <button type=" submit">Submit</button> <!--button is of type submit-->
 
 </form>

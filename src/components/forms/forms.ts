@@ -14,7 +14,7 @@ export class Forms {
   };
 
   getFormData(): any {
-    console.log('into getFormData');
+    // console.log('into getFormData');
     console.log(this.userDetails);
   }
 }

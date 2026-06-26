@@ -1,5 +1,13 @@
 <form [formGroup]="userForm" (ngSubmit)="this.getFormData()">
     <input formControlName="firstName" />
+    <span *ngIf="userForm.get('firstName')?.hasError('required') && userForm.get('firstName')?.touched">
+        This is a required field
+    </span>
+    <br />
     <input formControlName="lastName" />
+    <span *ngIf="userForm.get('lastName')?.hasError('required') && userForm.get('lastName')?.touched ">
+        This is required field
+    </span>
+    <br />
     <button type="submit">SUBMIT</button>
 </form>
