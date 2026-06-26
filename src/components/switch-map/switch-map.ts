@@ -14,9 +14,7 @@ export class SwitchMap implements OnInit {
   searchForm = new FormGroup({
     searchField: new FormControl('', Validators.required),
   });
-  constructor(public http: Http) {
-    
-  }
+  constructor(public http: Http) {}
 
   ngOnInit() {
     this.searchForm
@@ -24,7 +22,8 @@ export class SwitchMap implements OnInit {
       ?.valueChanges.pipe(
         debounceTime(500),
         distinctUntilChanged(),
-        switchMap((data) => data ? this.http.getSearchData(data) : ''),
+        switchMap((data) => (data ? this.http.getSearchData(data) : '')),
       )
       .subscribe((data) => console.log(data));
+  }
 }
