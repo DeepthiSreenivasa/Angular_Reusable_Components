@@ -1,5 +1,5 @@
-<form [formGroup]="this.userForm" (ngSubmit)="this.getFormData()">
-    <input formControl="firstName" />
-    <input formControl="lastName" />
-    <button type="submit"></button>
+<form [formGroup]="userForm" (ngSubmit)="this.getFormData()">
+    <input formControlName="firstName" />
+    <input formControlName="lastName" />
+    <button type="submit">SUBMIT</button>
 </form>

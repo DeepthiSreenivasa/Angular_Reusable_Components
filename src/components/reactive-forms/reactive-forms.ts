@@ -15,6 +15,6 @@ export class ReactiveForms {
   });
 
   getFormData() {
-    console.log(this.userForm);
+    console.log(this.userForm.value);
   }
 }

@@ -4,6 +4,7 @@ import { SearchWithDebounce } from '../../components/search-with-debounce/search
 import { CommentThread } from '../../components/comment-thread/comment-thread';
 import { MainLayout } from '../../layout/main-layout/main-layout';
 import { Forms } from '../../components/forms/forms';
+import { ReactiveForms } from '../../components/reactive-forms/reactive-forms';
 
 const routes: Routes = [
   { path: '', redirectTo: 'Home', pathMatch: 'full' },
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'NgModuleForms',
     component: Forms,
+  },
+  {
+    path: 'ReactiveFormsPath',
+    component: ReactiveForms,
   },
 ];
 
